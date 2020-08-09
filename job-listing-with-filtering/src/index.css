@@ -1,0 +1,25 @@
+@import url('https://fonts.google.com/specimen/Spartan?query=spartan&sidebar.open=true&selection.family=Spartan:wght@500;700');
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+};
+
+* {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: hsl(180, 52%, 96%);
+  /* position: relative; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,119 @@
+$listMargin: 15px;
+$radius: 10px;
+$padding: 2px 7px;
+$desaturatedDarkCyan: hsl(180, 29%, 50%);
+$veryDarkGrayishCyan: hsl(180, 14%, 20%);
+$lightGrayishCyan: hsl(180, 52%, 96%);
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    background-color: white;
+    width: 70vw;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 29px -11px rgba(44,58,58,0.49);
+
+    img {
+        width: 10%;
+        height: auto;
+        border-radius: 50%;
+        margin: 0 20px;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: column; 
+        align-self: center;
+        width: 100%;
+
+        .company {
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style-type: none;
+                align-content: flex-start;
+                padding-inline-start: 0;
+
+                li {
+                    margin-right: $listMargin;
+                }
+
+                #new {
+                    font-size: 12px;
+                    color: white;
+                    background-color: $desaturatedDarkCyan;
+                    border-radius: $radius;
+                    padding: $padding;
+                    border: 1px solid transparent;
+                    cursor: pointer;
+                }
+
+                #featured {
+                    font-size: 12px;
+                    color: white;
+                    background-color: $veryDarkGrayishCyan;
+                    border-radius: $radius;
+                    border: 1px solid transparent;
+                    padding: $padding;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .job-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                color: $desaturatedDarkCyan;
+                margin: 0;
+                cursor: pointer;
+            } 
+
+            @extend .company;
+
+            .tag {
+                background-color: $lightGrayishCyan;
+                padding: $padding;
+                border: 1px solid transparent;
+                text-align: center;
+                border-radius: 5px;
+                cursor: pointer;
+                
+                &:hover {
+                    color: white;
+                    background-color: $desaturatedDarkCyan;
+                }
+            }
+        }
+
+        .details {
+            color: hsl(180, 8%, 52%);
+            font-weight: 500;
+            
+            ul {
+                display: flex;
+                justify-content: space-around;
+                align-self: flex-start;
+                padding-inline-start: 0px;
+
+                li:first-of-type {
+                    list-style-type: none;
+                    padding-inline-end: 10px;
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+
+                li {
+                    margin: 0 10px;
+                    padding-inline-end: 10px;
+                }
+            }
+        }
+    }
+}

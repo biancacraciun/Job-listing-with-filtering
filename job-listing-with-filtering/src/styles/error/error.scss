@@ -1,0 +1,87 @@
+$desaturatedDarkCyan: hsl(180, 29%, 50%);
+$failed: hsl(349,96%,52%);
+
+.error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: black;
+    opacity: 0.5;
+    border: 1px solid transparent;
+
+    .show-error {   
+        color: $failed;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-block-start: 0;
+        margin-block-end: 0;
+        text-transform: uppercase;
+        text-align: center;
+        word-spacing: 10px;
+        letter-spacing: 5px;
+        width: 100%;
+    }   
+
+    button {
+        width: 50px;
+        height: 35px;
+        padding: 2px;
+        background: none;
+        border: none;
+        outline: none;
+        color: transparent;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+        overflow: hidden;
+        letter-spacing: 1.5px;
+        font-size: .7em;
+        position: absolute;
+        left: 98%;
+        top: 5%;
+        transform: translate(-98%, -5%);
+        transition: all 0.2s ease-in;
+    }
+
+}
+
+button::before, 
+button::after {
+    background-color: $desaturatedDarkCyan;
+    content: '';
+    // display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transform-origin: center left;
+    transition: all 0.2s ease-in;
+    width: 50px;
+    z-index: -1;
+};
+
+button::before {
+    top: 0;
+    transform: rotate(45deg);
+};
+
+button::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+};
+
+button:hover {
+    color: $failed;
+};
+
+button:hover::before,
+button:hover::after {
+    height: 2px;
+    transform: rotate(0deg);
+}
