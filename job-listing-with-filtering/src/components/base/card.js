@@ -26,6 +26,7 @@ class Card extends Component {
     
                     <section className="job-title">
                         <h3>{this.props.position}</h3>
+                        <div id="line"/>
                         <ul>
                             {this.props.tags.map((tag) => {
                                 const capitalizedTag = capitalize(tag);
@@ -41,7 +42,7 @@ class Card extends Component {
                         </ul>
                     </section>
                     
-                    <section className="details">
+                    <section className="position-details">
                         <ul>
                             <li>{this.props.posted}</li>
                             <li>{this.props.type}</li>

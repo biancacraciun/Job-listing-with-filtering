@@ -1,0 +1,94 @@
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: black;
+  opacity: 0.5;
+  border: 1px solid transparent;
+}
+
+.error .show-error {
+  color: #fa0f3a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  text-transform: uppercase;
+  text-align: center;
+  word-spacing: 10px;
+  letter-spacing: 5px;
+  width: 100%;
+}
+
+.error button {
+  width: 50px;
+  height: 35px;
+  padding: 2px;
+  background: none;
+  border: none;
+  outline: none;
+  color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  letter-spacing: 1.5px;
+  font-size: .7em;
+  position: absolute;
+  left: 98%;
+  top: 5%;
+  -webkit-transform: translate(-98%, -5%);
+          transform: translate(-98%, -5%);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button::before,
+button::after {
+  background-color: #5ba4a4;
+  content: '';
+  height: 1px;
+  left: 0;
+  position: absolute;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  width: 50px;
+  z-index: -1;
+}
+
+button::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+button::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+button:hover {
+  color: #fa0f3a;
+}
+
+button:hover::before,
+button:hover::after {
+  height: 2px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+/*# sourceMappingURL=error.css.map */

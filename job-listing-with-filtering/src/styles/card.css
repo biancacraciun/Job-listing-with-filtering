@@ -1,0 +1,208 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  width: 70vw;
+  height: 200px;
+  margin: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 29px -11px rgba(44, 58, 58, 0.49);
+          box-shadow: 10px 10px 29px -11px rgba(44, 58, 58, 0.49);
+}
+
+.container img {
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.container .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+}
+
+.container .details .company ul, .container .details .job-title ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+.container .details .company ul li, .container .details .job-title ul li {
+  margin-right: 15px;
+}
+
+.container .details .company ul #new, .container .details .job-title ul #new {
+  font-size: 12px;
+  color: white;
+  background-color: #5ba4a4;
+  border-radius: 10px;
+  padding: 2px 7px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.container .details .company ul #featured, .container .details .job-title ul #featured {
+  font-size: 12px;
+  color: white;
+  background-color: #2c3a3a;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 2px 7px;
+  cursor: pointer;
+}
+
+.container .details .job-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .details .job-title h3 {
+  color: #5ba4a4;
+  margin: 0;
+  cursor: pointer;
+}
+
+.container .details .job-title .tag {
+  background-color: #effafa;
+  padding: 2px 7px;
+  border: 1px solid transparent;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container .details .job-title .tag:hover {
+  color: white;
+  background-color: #5ba4a4;
+}
+
+.container .details .position-details {
+  color: #7b8e8e;
+  font-weight: 500;
+}
+
+.container .details .position-details ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+.container .details .position-details ul li:first-of-type {
+  list-style-type: none;
+  -webkit-padding-end: 10px;
+          padding-inline-end: 10px;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.container .details .position-details ul li {
+  margin: 0 10px;
+  -webkit-padding-end: 10px;
+          padding-inline-end: 10px;
+}
+
+@media (max-width: 950px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 30px 0px;
+    height: auto;
+    width: auto;
+  }
+  .container img {
+    margin: 10px;
+  }
+  .container .details .company, .container .details .job-title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .details .company ul li:first-of-type, .container .details .job-title ul li:first-of-type {
+    margin-left: 15px;
+  }
+  .container .details .job-title {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container .details .job-title h3 {
+    margin-left: 15px;
+  }
+  .container .details .job-title ul {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  .container .details .job-title #line {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: #2c3a3a;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 10px 0;
+  }
+  .container .details .job-title .tag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .position-details ul li:first-of-type {
+    -webkit-padding-start: 15px;
+            padding-inline-start: 15px;
+  }
+}
+/*# sourceMappingURL=card.css.map */

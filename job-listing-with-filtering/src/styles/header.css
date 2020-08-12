@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  height: 15%;
+  background-color: #5ba4a4;
+  position: relative;
+}
+
+.header img {
+  height: 100%;
+  width: inherit;
+}
+/*# sourceMappingURL=header.css.map */
